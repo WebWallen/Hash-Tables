@@ -136,7 +136,7 @@ class HashTable:
             current = stuff
             # While current is not none (resizing incomplete)...
             while current is not None:
-                # Insert the current key and value
+                # Insert the current key and value to new storage contaier
                 self.insert(current.key, current.value)
                 # Attach the next pointer to current and reassign (continues loop)
                 current = current.next
@@ -148,7 +148,7 @@ class HashTable:
             this_pair = paired_stuff
             # While this_pair is not none (resizing incomplete)...
             while this_pair is not None:
-                # Increment the count by one to account for added pair
+                # Increment the hashtable count by one to account for added pair
                 self.count += 1
                 # Attach the next pointer to this_pair and reassign (continues loop)
                 this_pair = this_pair.next
